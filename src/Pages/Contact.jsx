@@ -66,7 +66,7 @@ const Contacts = () => {
                   <h3 className="text-lg font-medium mb-2 flex items-center">
                     <AiOutlineEnvironment className="mr-2" /> Our Address
                   </h3>
-                  <p>Annanta Pharmaceuticals, Sarsaul, 209402 Kanpur, Uttar Pradesh</p>
+                  <p>Kanpur, Uttar Pradesh</p>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotateY: 10 }}
@@ -75,7 +75,7 @@ const Contacts = () => {
                   <h3 className="text-lg font-medium mb-2 flex items-center">
                     <AiOutlineMail className="mr-2" /> Our Email
                   </h3>
-                  <p>annantapharmaceuticals@gmail.com</p>
+                  <p>arcaiengineer@gmail.com</p>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotateY: -10 }}
@@ -84,7 +84,7 @@ const Contacts = () => {
                   <h3 className="text-lg font-medium mb-2 flex items-center">
                     <AiOutlinePhone className="mr-2" /> Contact
                   </h3>
-                  <p>+91 9839175313, +91 8874990774</p>
+                  <p>+91 9151636108</p>
                 </motion.div>
               </div>
 

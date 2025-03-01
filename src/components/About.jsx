@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section id="about" className="relative py-20 px-6 md:px-16 lg:px-24 bg-[#0A0E17] text-white">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center pt-20 pb-10">
         {/* Heading */}
         <motion.h2
           className="text-cyan-400 text-lg uppercase tracking-widest"
@@ -15,7 +15,7 @@ const About = () => {
           Who We Are
         </motion.h2>
         <motion.h3
-          className="mt-2 text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"
+          className="mt-2 text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent pt-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -42,7 +42,7 @@ const About = () => {
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="rounded-xl border border-gray-700 bg-[#121826] p-6 text-center shadow-lg shadow-cyan-500/30 hover:scale-105 transition-transform duration-300"
+            className="rounded-xl border border-gray-700 bg-[#121826] p-6 text-center shadow-lg shadow-cyan-500/30 hover:scale-105 transition-transform duration-300 pt-7 pb-7"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
@@ -55,7 +55,7 @@ const About = () => {
 
       {/* Call-to-Action Buttons */}
       <motion.div
-        className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12"
+        className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 pt-10 pb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

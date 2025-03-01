@@ -31,15 +31,15 @@ const features = [
 
 const ProductDetails = () => {
   return (
-    <section className="bg-gradient-to-r from-black-100 to-purple-200 text-gray-900 py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+    <section className="bg-gradient-to-r from-black-100 to-purple-200 text-gray-900 py-16 px-6 pt-16">
+      <div className="max-w-6xl mx-auto text-center mb-12 pt-16">
         <motion.h2 
           className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-teal-300">Discover the Power of</span> <span className="text-purple-600">arcAI!</span>
+          <span className="text-teal-300">Discover the Power of AI with</span> <br /><span className="text-purple-600 text-7xl">arcAI!</span>
         </motion.h2>
       </div>
       <div className="max-w-6xl mx-auto space-y-12">
