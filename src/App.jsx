@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 // Adding Vercel Analytics
+import { Analytics } from "@vercel/analytics/react"
 // import { Analytics } from "@vercel/analytics/react"
 import Home from './Pages/Home';
 import About from './Pages/Aboutus';
