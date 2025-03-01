@@ -31,7 +31,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg" />
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg lg:blur-md blur-0 group-hover:opacity-60 transition-opacity duration-500" />
                 <div className="relative flex items-center justify-center gap-2">
-                  <span className="text-white font-medium">Get Started</span>
+                  <span className="text-white font-medium"><a href="/product">Get Started</a></span>
                   <svg
                     className="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -48,7 +48,7 @@ const Hero = () => {
                 </div>
               </button>
               <button className="w-full sm:w-auto px-6 py-3 rounded-lg border border-white/10 bg-white/5 backdrop-blur-lg text-white/70 hover:bg-white/10 hover:text-white transition-all min-w-[160px]">
-                Documentation
+               <a href="/about"> Documentation</a>
               </button>
             </div>
           </div>

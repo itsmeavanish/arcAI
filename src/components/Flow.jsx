@@ -6,7 +6,7 @@ const Flow = () => {
   <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div className="max-w-2xl mx-auto text-center">
       <h2 className="text-4xl text-white font-extrabold mx-auto md:text-6xl lg:text-5xl">
-        How we work?
+        What We Do?
       </h2>
       <p className="max-w-2xl mx-auto mt-4 text-base text-gray-400 leading-relaxed md:text-2xl">
         Our AI solution will help you from start to finish

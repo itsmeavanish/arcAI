@@ -39,7 +39,7 @@ const ProductDetails = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-cyan-500">Discover the Power of</span> <span className="text-purple-600">arcAI!</span>
+          <span className="text-teal-300">Discover the Power of</span> <span className="text-purple-600">arcAI!</span>
         </motion.h2>
       </div>
       <div className="max-w-6xl mx-auto space-y-12">
