@@ -1,113 +1,57 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FaStar, FaThumbsUp, FaChartLine, FaRedo } from "react-icons/fa"; // Importing icons
+import { Star, Quote } from "lucide-react";
 
 const reviews = [
   {
-    name: "Anurag Upadhyay",
-    review: "This has helper me a lot",
+    name: "John Doe",
+    company: "Tech Corp",
+    review: "The AI solutions provided by this company are top-notch. The accuracy and efficiency have greatly improved our workflow.",
+    rating: 5,
   },
   {
-    name: "Rajesh Kumar",
-    review: "I love how it saves water without compromising on cleanliness. Truly a great investment!",
+    name: "Jane Smith",
+    company: "FinBank",
+    review: "Impressive AI models that have helped us predict market trends with remarkable precision!",
+    rating: 4.5,
   },
-  // {
-  //   name: "Sita Rani",
-  //   review: "This e-toilet is eco-friendly and has made a significant difference in our household.",
-  // },
-  // {
-  //   name: "Vikram Singh",
-  //   review: "The hygiene features are top-notch! I feel safer and cleaner using this toilet.",
-  // },
-  // {
-  //   name: "Meera Joshi",
-  //   review: "My family loves it! It’s convenient and makes life so much easier.",
-  // },
-  // {
-  //   name: "Aarav Kapoor",
-  //   review: "The advanced technology in this toilet is impressive. Highly recommend it to everyone!",
-  // },
+  {
+    name: "Alice Brown",
+    company: "MediTech",
+    review: "The AI chatbot is a game changer for our customer support team. Highly recommended!",
+    rating: 5,
+  },
 ];
 
-const Marquee = () => {
+const ReviewCard = ({ name, company, review, rating }) => {
   return (
-    <div className="bg-gray-900 text-white overflow-hidden">
-      <section className="pb-12 mx-auto md:pb-20 max-w-6xl">
-        <div className="py-4 text-center md:py-8">
-          <h4 className="text-base font-bold tracking-wide text-teal-600 uppercase text-center">
-            Customer Reviews
-          </h4>
-          <p className="mt-2 text-xl tracking-tight text-gray-300 md:text-2xl">
-            What our clients says about our services
-          </p>
-        </div>
-
-        {/* Marquee Container */}
-        <motion.div
-          className="flex space-x-6"
-          animate={{ x: ["100%", "-100%"] }}
-          transition={{ duration: 30, ease: [0.3, 0, 0.7, 1], repeat: Infinity }} // Slower movement
-        >
-          {/* Repeat the reviews to create a seamless effect */}
-          {[...reviews, ...reviews].map((review, index) => (
-            <motion.div
-              key={index}
-              className="flex-shrink-0 w-64 p-6 bg-gray-800 border border-gray-700 shadow-lg rounded-lg"
-            >
-              <FaStar className="text-teal-500 mb-2" size={30} />
-              <h6 className="text-lg font-medium">{review.name}</h6>
-              <p className="mt-2">{review.review}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      {/* Statistics Section */}
-      <section id="stats" className="py-16 lg:py-24">
-        <div className="container mx-auto text-center">
-          <p className="uppercase tracking-wider text-gray-600">Our customers get results</p>
-
-          <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-            {/* Stat Block 1 */}
-            <motion.div
-              className="flex flex-col items-center w-full sm:w-1/3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 300, delay: 0.2 }}
-            >
-              <FaThumbsUp className="text-teal-500 mb-2" size={40} />
-              <p className="text-4xl lg:text-6xl font-semibold text-teal-500">+90%</p>
-              <p className="font-semibold mb-6">Customer Satisfaction</p>
-            </motion.div>
-
-            {/* Stat Block 2 */}
-            <motion.div
-              className="flex flex-col items-center w-full sm:w-1/3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 300, delay: 0.4 }}
-            >
-              <FaChartLine className="text-teal-500 mb-2" size={40} />
-              <p className="text-4xl lg:text-6xl font-semibold text-teal-500">+75%</p>
-              <p className="font-semibold mb-6">Product Efficiency</p>
-            </motion.div>
-
-            {/* Stat Block 3 */}
-            <motion.div
-              className="flex flex-col items-center w-full sm:w-1/3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 300, delay: 0.6 }}
-            >
-              <FaRedo className="text-teal-500 mb-2" size={40} />
-              <p className="text-4xl lg:text-6xl font-semibold text-teal-500">+80%</p>
-              <p className="font-semibold mb-6">Repeat user</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <motion.div
+      className="bg-gray-900/80 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-gray-700 max-w-sm relative overflow-hidden"
+      whileHover={{ scale: 1.05 }}
+    >
+      <Quote className="absolute top-4 right-4 text-gray-600 h-8 w-8" />
+      <div className="flex items-center gap-2 mb-3">
+        {[...Array(5)].map((_, index) => (
+          <Star key={index} className={`h-5 w-5 ${index < Math.floor(rating) ? "text-yellow-400" : "text-gray-600"}`} />
+        ))}
+      </div>
+      <p className="text-gray-300 mb-4 text-lg italic">"{review}"</p>
+      <h3 className="text-white font-semibold text-xl">{name}</h3>
+      <p className="text-gray-400 text-sm">{company}</p>
+    </motion.div>
   );
 };
 
-export default Marquee;
+export default function ReviewsSection() {
+  return (
+    <section className="bg-gray-950 py-16 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-white mb-12">What Our Clients Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+          {reviews.map((review, index) => (
+            <ReviewCard key={index} {...review} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

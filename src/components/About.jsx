@@ -1,62 +1,78 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 md:px-20 lg:px-20 bg-black">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          {/* Heading */}
-          <h2 className="text-cyan-400 text-lg mb-2" data-aos="fade-down">
-            About Us
-          </h2>
-          <h3
-            className="mb-4 text-3xl font-bold text-white section-title"
-            data-aos="fade-down"
-          >
-            Revolutionizing the Future with AI
-          </h3>
-          <p className="mb-8 max-w-3xl mx-auto text-gray-400" data-aos="fade-down">
-            At the intersection of technology and intelligence, we craft AI-powered
-            solutions that redefine possibilities. Our journey is fueled by innovation,
-            data, and the drive to shape a smarter world.
-          </p>
-        </div>
-        {/* About Cards Section */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Card 1 */}
-          <div className="rounded-lg border border-gray-800 bg-[#0F0F0F] p-6 text-center shadow-lg shadow-cyan-500/20">
-            <h4 className="mb-2 text-3xl font-bold text-cyan-400">10+</h4>
-            <p className="text-gray-400">Years in AI Innovation</p>
-          </div>
-          <div className="rounded-lg border border-gray-800 bg-[#0F0F0F] p-6 text-center shadow-lg shadow-cyan-500/20">
-            <h4 className="mb-2 text-3xl font-bold text-cyan-400">100+</h4>
-            <p className="text-gray-400">AI Solutions Deployed</p>
-          </div>
-          <div className="rounded-lg border border-gray-800 bg-[#0F0F0F] p-6 text-center shadow-lg shadow-cyan-500/20">
-            <h4 className="mb-2 text-3xl font-bold text-cyan-400">50K+</h4>
-            <p className="text-gray-400">Users Empowered</p>
-          </div>
-          <div className="rounded-lg border border-gray-800 bg-[#0F0F0F] p-6 text-center shadow-lg shadow-cyan-500/20">
-            <h4 className="mb-2 text-3xl font-bold text-cyan-400">24/7</h4>
-            <p className="text-gray-400">AI-Driven Support</p>
-          </div>
-        </div>
-        {/* Buttons Section */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-12" data-aos="fade-up">
-          <a
-            href="#team"
-            className="cursor-pointer rounded-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 shadow-lg shadow-cyan-500/30"
-          >
-            Meet Our AI Experts
-          </a>
-          <a
-            href="#contact"
-            className="cursor-pointer rounded-full border-2 py-3 px-8 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-300 ease-in-out"
-          >
-            Connect With Us
-          </a>
-        </div>
+    <section id="about" className="relative py-20 px-6 md:px-16 lg:px-24 bg-[#0A0E17] text-white">
+      <div className="container mx-auto text-center">
+        {/* Heading */}
+        <motion.h2
+          className="text-cyan-400 text-lg uppercase tracking-widest"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Who We Are
+        </motion.h2>
+        <motion.h3
+          className="mt-2 text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Transforming Industries with AI Innovation
+        </motion.h3>
+        <motion.p
+          className="mt-4 max-w-3xl mx-auto text-gray-400"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Leveraging artificial intelligence to build next-gen solutions that empower businesses, enhance decision-making, and drive a smarter future.
+        </motion.p>
       </div>
+
+      {/* Stats Section */}
+      <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { value: "15+", label: "Years of AI Excellence" },
+          { value: "250+", label: "AI-Powered Solutions" },
+          { value: "1M+", label: "Global Users Impacted" },
+          { value: "99.9%", label: "AI Uptime & Reliability" },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="rounded-xl border border-gray-700 bg-[#121826] p-6 text-center shadow-lg shadow-cyan-500/30 hover:scale-105 transition-transform duration-300"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.2, duration: 0.6 }}
+          >
+            <h4 className="text-4xl font-bold text-cyan-400">{item.value}</h4>
+            <p className="mt-2 text-gray-300">{item.label}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Call-to-Action Buttons */}
+      <motion.div
+        className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <a
+          href="#team"
+          className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-3 px-8 shadow-lg transition-transform hover:scale-105"
+        >
+          Meet Our AI Experts
+        </a>
+        <a
+          href="#contact"
+          className="rounded-full border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-3 px-8 transition-transform hover:scale-105"
+        >
+          Connect With Us
+        </a>
+      </motion.div>
     </section>
   );
 };

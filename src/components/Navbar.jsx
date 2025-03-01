@@ -23,10 +23,9 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home", icon: <RiHomeHeartLine className="mr-2" /> },
-    { href: "/about", label: "About Us", icon: <RiInformationLine className="mr-2" /> },
     { href: "/product", label: "Product", icon: <RiUserHeartLine className="mr-2" /> },
     { href: "/contact", label: "Contact", icon: <RiContactsBookLine className="mr-2" /> },
-    { href: "/Article", label: "Article", icon: <RiContactsBookLine className="mr-2" /> },
+    { href: "/about", label: "About Us", icon: <RiInformationLine className="mr-2" /> },
   ];
 
   return (
@@ -57,12 +56,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <button
-            onClick={handleLogout}
-            className="flex items-center px-4 py-2 rounded bg-gradient-to-r from-red-600 to-red-800 text-white hover:from-red-700 hover:to-red-900 transition-all duration-300 hover:scale-110 shadow-md"
-          >
-            <RiLogoutBoxRLine className="mr-2" /> Logout
-          </button>
+        
         </div>
 
         {/* Mobile Menu Button */}
@@ -95,15 +89,6 @@ const Navbar = () => {
               </span>
             </a>
           ))}
-          <button
-            onClick={() => {
-              handleLogout();
-              setIsOpen(false);
-            }}
-            className="block w-full mt-4 py-3 bg-gradient-to-r from-red-600 to-red-800 rounded text-center text-white hover:from-red-700 hover:to-red-900 transition-all duration-300 hover:scale-105 shadow-md"
-          >
-            <RiLogoutBoxRLine className="inline mr-2" /> Logout
-          </button>
         </motion.div>
       )}
     </motion.nav>
