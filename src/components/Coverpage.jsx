@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import img from "../assets/logo.png";
+import img from "../assets/logo2.png";
 import video from "../assets/9574128-sd_960_506_25fps.mp4";
 
 const Coverpage = () => {
@@ -19,9 +19,9 @@ const Coverpage = () => {
       
       <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 md:px-12">
         <div className="flex items-center space-x-4 mb-8">
-          <img src={img} alt="Annanta Logo" className="h-16 md:h-24" />
+          <img src={img} alt="arcAI Logo" className="h-16 md:h-24" />
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Annanta <span className="text-teal-300">Pharmaceuticals</span>
+            arcAI <span className="text-teal-300">engineer</span>
           </h1>
         </div>
         
@@ -31,7 +31,7 @@ const Coverpage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Innovating healthcare solutions with excellence and integrity.
+          Innovating affordable AI solutions.
         </motion.p>
         
         <motion.a

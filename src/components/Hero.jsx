@@ -16,11 +16,11 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-around">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 relative">
             <h1 className="text-4xl md:text-8xl font-bold mb-6 leading-tight">
-              arcAI
-              <br />
-              <span className="text-5xl bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 inline-block text-transparent bg-clip-text">
+            <span className="text-7xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">arcAI</span>
+              
+              <div className="text-2xl text-white">
                 Affordable AI Solutions
-              </span>
+              </div>
             </h1>
             <p className="text-xl mb-5 text-gray-300">
               Harnessing Research for developing Sustainable, Scalable, &amp;

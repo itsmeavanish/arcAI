@@ -11,7 +11,7 @@ import {
   RiLogoutBoxRLine,
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-import img from "/src/assets/logo.png";
+import img from "/src/assets/logo2.png";
 import { FaTools } from "react-icons/fa";
 
 const Navbar = () => {
@@ -32,15 +32,18 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[70em] bg-gray-500 shadow-lg z-50 px-6 py-2 rounded-full flex items-center justify-between space-x-6"
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[70em] bg-black/50 border border-white/20 shadow-lg z-50 px-6 py-2 rounded-full flex items-center justify-between space-x-6 pl-2 pr-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <img src={img} alt="Annanta Logo" className="h-16 w-16 rounded-full" />
-      </div>
+        <img src={img} alt="arcAI Logo" className="h-16 w-16 rounded-full" /> 
+        {/* <span className="pl-2 text-3xl bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-bold">arcAI</span> */}
+        <span className="pl-2 text-3xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">arcAI.engineer</span>
+        </div>
+
 
       {/* Navbar Links for Desktop */}
       <div className="hidden lg:flex items-center space-x-8">
@@ -48,7 +51,7 @@ const Navbar = () => {
           <a
             key={link.href}
             href={link.href}
-            className="flex items-center text-white hover:text-teal-300 transition-all duration-300"
+            className="flex items-center text-white hover:text-cyan-300 transition-all duration-300"
           >
             {link.icon}
             {link.label}

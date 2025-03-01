@@ -35,9 +35,9 @@ const About = () => {
       {/* Stats Section */}
       <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          { value: "15+", label: "Years of AI Excellence" },
-          { value: "250+", label: "AI-Powered Solutions" },
-          { value: "1M+", label: "Global Users Impacted" },
+          { value: "1+", label: "Years of AI Excellence" },
+          { value: "50+", label: "AI-Powered Solutions" },
+          { value: "100+", label: "Global Users Impacted" },
           { value: "99.9%", label: "AI Uptime & Reliability" },
         ].map((item, index) => (
           <motion.div
@@ -61,7 +61,7 @@ const About = () => {
         transition={{ duration: 0.8 }}
       >
         <a
-          href="#team"
+          href="#"
           className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-3 px-8 shadow-lg transition-transform hover:scale-105"
         >
           Meet Our AI Experts
