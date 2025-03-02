@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[70em] bg-black/50 border border-white/20 shadow-lg z-50 px-6 py-2 rounded-full flex items-center justify-between space-x-6 pl-2 pr-12"
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[70em] bg-black/20 border border-white/20 shadow-lg z-50 px-6 py-2 rounded-full flex items-center justify-between space-x-6 pl-2 pr-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
@@ -70,9 +70,9 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <RiCloseLine className="text-gray-800" size={30} />
+            <RiCloseLine className="text-white" size={35} />
           ) : (
-            <RiMenu3Line className="text-gray-800" size={30} />
+            <RiMenu3Line className="text-white" size={35} />
           )}
         </motion.div>
       </div>
