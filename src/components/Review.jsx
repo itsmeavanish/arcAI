@@ -69,7 +69,7 @@ export default function ReviewsSection() {
   };
 
   return (
-    <section className="bg-gray-950 py-16 px-6 flex flex-col items-center">
+    <section className="bg-gradient-to-l from-black/70 to-blue-950 text-gray-900 py-16 px-6 flex flex-col items-center">
       <h2 className="text-4xl font-bold text-white mb-12">What Our Clients Say</h2>
       <div className="flex items-center gap-4 w-full max-w-4xl">
         <button onClick={prevReview} className="text-white p-2 bg-gray-800 rounded-full hover:bg-gray-700">
