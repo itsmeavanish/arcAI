@@ -15,11 +15,14 @@ const Footer = () => {
       <div className="relative flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
         {/* Logo and Description */}
         <div className="flex flex-col items-center md:items-start">
-          <img 
-            src={logo} 
-            alt="arcAI Logo" 
-            className="h-16 w-16 mb-3 rounded-full transition-transform duration-300 hover:scale-110 hover:rotate-6" 
-          />
+          <div className="flex items-center">
+            <img
+              src={logo}
+              alt="arcAI Logo"
+              className="h-16 w-16 mb-3 rounded-full transition-transform duration-300 hover:scale-110 hover:rotate-6"
+            />
+            <span className="bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-300 bg-clip-text text-transparent font-bold">arcAI.engineer</span>
+          </div>
           <p className="text-sm max-w-sm text-gray-400">
             Providing affordable AI solutions for all your business needs
           </p>

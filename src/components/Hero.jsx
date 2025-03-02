@@ -9,7 +9,7 @@ const Hero = () => {
         style={{
           backgroundImage:
             'url("https://www.leadsnextech.com/_next/static/media/bg.153fe1e6.jpg")',
-          filter: "brightness(2)",
+          filter: "brightness(1.2)",
         }}
       />
       <div className="absolute inset-0 bg-black opacity-50" />

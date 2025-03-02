@@ -32,17 +32,22 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[70em] bg-black/20 border border-white/20 shadow-lg z-50 px-6 py-2 rounded-full flex items-center justify-between space-x-6 pl-2 pr-12"
+      className="fixed w-full bg-black/70 shadow-lg z-50 px-6 py-2 flex items-center justify-between space-x-6 pl-16 pr-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
       {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <img src={img} alt="arcAI Logo" className="h-16 w-16 rounded-full" /> 
+      <div className="flex items-center">
+        <a href="/">
+          <img src={img} alt="arcAI Logo" className="h-16 w-16" />
+        </a>
         {/* <span className="pl-2 text-3xl bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-bold">arcAI</span> */}
-        <span className="pl-2 text-3xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent font-bold">arcAI.engineer</span>
-        </div>
+        <span className="pl-2 text-2xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-200 bg-clip-text text-transparent font-bold">
+          <a href="/">
+            arcAI.engineer</a>
+        </span>
+      </div>
 
 
       {/* Navbar Links for Desktop */}
@@ -58,14 +63,14 @@ const Navbar = () => {
           </a>
         ))}
         {/* Logout Button */}
-       
+
       </div>
 
       {/* Hamburger Menu for Mobile */}
       <div className="lg:hidden">
         <motion.div
           className="flex items-center justify-center"
-         
+
           transition={{ duration: 0.2 }}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -80,7 +85,7 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <motion.div
-          
+
           className="absolute top-16 left-1/2 transform -translate-x-1/2 w-full bg-white shadow-lg p-6 rounded-lg flex flex-col items-center space-y-4"
         >
           {navLinks.map((link) => (

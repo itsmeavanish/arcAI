@@ -13,30 +13,33 @@ import Footer from "./components/Footer";
 //import Whatsapp from './components/Whatsapp';
 import Productdetail from './components/Productdetails';
 //import CosmosBackground from './components/CosmosBackground';
+// import ParticleBackground from './components/Particle';
 
 //import Article from './Pages/Article';
 
 const App = () => {
   return (
+    
     <HelmetProvider>
-      
-    <div className='bg-gray-950'>
-    <Router>
-        <Navbar />
-     
-        <Routes>
-         
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:id" element={<Productdetail />} />
-         
-        </Routes>
-       
-        <Footer />
-      </Router>
-    </div>
+      {/* <ParticleBackground /> */}
+
+      <div className='bg-gray-950'>
+        <Router>
+          <Navbar />
+
+          <Routes>
+
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:id" element={<Productdetail />} />
+
+          </Routes>
+
+          <Footer />
+        </Router>
+      </div>
     </HelmetProvider>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Flow = () => {
   return (
-    <section id="works" className="bg-gradient-to-l from-black/70 to-blue-950 text-gray-900 relative bg-gray-900 py-10 sm:py-16 lg:py-24">
+    <section id="works" className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-blue-900/50 to-black text-gray-900 relative bg-gray-900 py-10 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 pt-10 pb-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl text-white font-extrabold mx-auto sm:text-4xl md:text-5xl lg:text-6xl">
@@ -12,6 +12,7 @@ const Flow = () => {
             Our AI solution will help you from start to finish
           </p>
         </div>
+
         <div className="relative mt-12 lg:mt-20">
           <div className="absolute inset-x-0 hidden lg:block xl:px-44 top-2 md:px-20 lg:px-28"> {/* Changed to lg:block */}
             <img
@@ -25,6 +26,7 @@ const Flow = () => {
               src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
             />
           </div>
+
           <div className="relative flex flex-col items-center gap-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8"> {/* Changed to lg:grid */}
             {[
               {
@@ -57,6 +59,10 @@ const Flow = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className='text-white text-center mt-4'>To get started,
+        <a className='text-white text-center'
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdNb-uLNN4wEYkNAs26lnkmdDGWvdSXjyx-hlHglzopLgCFHw/viewform">(Fill this Form)</a>
       </div>
       <div
         className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"

@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { 
-  AiOutlineMail, 
-  AiOutlinePhone, 
-  AiOutlineEnvironment, 
-  AiOutlineUser, 
+import {
+  AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineEnvironment,
+  AiOutlineUser,
   AiOutlineMessage,
   AiOutlineSend
 } from 'react-icons/ai';
@@ -25,12 +25,12 @@ const Contact = () => {
     threshold: 0.3,
     triggerOnce: true,
   });
-  
+
   const [refForm, inViewForm] = useInView({
     threshold: 0.3,
     triggerOnce: true,
   });
-  
+
   const [refInfo, inViewInfo] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -75,7 +75,7 @@ const Contact = () => {
       });
       return false;
     }
-    
+
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -85,7 +85,7 @@ const Contact = () => {
       });
       return false;
     }
-    
+
     return true;
   };
 
@@ -93,7 +93,7 @@ const Contact = () => {
     e.preventDefault();
     if (validateForm()) {
       setLoading(true);
-      
+
       // Simulate API call with timeout
       try {
         await new Promise(resolve => setTimeout(resolve, 1500));
@@ -103,7 +103,7 @@ const Contact = () => {
           autoClose: 5000
         });
         setFormData({ name: '', email: '', subject: '', message: '' });
-        
+
         // Reset submitted state after 5 seconds
         setTimeout(() => setSubmitted(false), 5000);
       } catch (error) {
@@ -123,10 +123,13 @@ const Contact = () => {
         <meta property="og:description" content="Contact arcAI.engineer for innovative AI solutions and services." />
         <meta property="og:type" content="website" />
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-16 pt-26">
-      {/* <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16"> */}
+        {/* <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16"> */}
+
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <motion.div 
+          <motion.div
             ref={refTitle}
             initial={{ opacity: 0, y: 50 }}
             animate={inViewTitle ? { opacity: 1, y: 0 } : {}}
@@ -134,12 +137,17 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 mb-4 mt-10">Get In Touch</h1>
+            
+        <div className='text-white text-center mt-4'>To get started
+          <a className='text-white text-center'
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdNb-uLNN4wEYkNAs26lnkmdDGWvdSXjyx-hlHglzopLgCFHw/viewform"> (Fill this google form) (click me)</a>
+        </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Have a question or want to learn more about our AI solutions? Reach out and we'll respond as soon as possible.</p>
           </motion.div>
-          
+
           <div className="grid lg:grid-cols-5 gap-10">
             {/* Contact Info */}
-            <motion.div 
+            <motion.div
               ref={refInfo}
               initial={{ opacity: 0, x: -50 }}
               animate={inViewInfo ? { opacity: 1, x: 0 } : {}}
@@ -148,10 +156,10 @@ const Contact = () => {
             >
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Information</h2>
-                
+
                 <div className="space-y-6">
                   {contactInfo.map((item, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       whileHover={{ scale: 1.03 }}
                       className={`bg-gradient-to-r ${item.color} p-6 rounded-xl shadow-lg text-white`}
@@ -166,12 +174,12 @@ const Contact = () => {
                     </motion.div>
                   ))}
                 </div>
-                
+
                 <div className="mt-10">
                   <h3 className="text-lg font-semibold text-gray-700 mb-4">Connect With Us</h3>
                   <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
-                      <motion.a 
+                      <motion.a
                         key={index}
                         href={social.url}
                         target="_blank"
@@ -186,9 +194,9 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Contact Form */}
-            <motion.div 
+            <motion.div
               ref={refForm}
               initial={{ opacity: 0, x: 50 }}
               animate={inViewForm ? { opacity: 1, x: 0 } : {}}
@@ -197,7 +205,7 @@ const Contact = () => {
             >
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 <h2 className="text-2xl font-bold mb-6 text-gray-800">Send a Message</h2>
-                
+
                 <AnimatePresence>
                   {submitted ? (
                     <motion.div
@@ -215,7 +223,7 @@ const Contact = () => {
                       <p className="text-green-700">Thank you for reaching out. We'll get back to you shortly.</p>
                     </motion.div>
                   ) : (
-                    <motion.form 
+                    <motion.form
                       onSubmit={handleSubmit}
                       className="space-y-6"
                     >
@@ -294,7 +302,7 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
-          
+
           {/* Map or Additional Info */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -316,6 +324,7 @@ const Contact = () => {
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
       <ToastContainer position="top-right" />
