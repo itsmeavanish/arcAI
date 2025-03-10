@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-blue-900/50 to-black text-gray-900 relative py-20 px-6 md:px-16 lg:px-24 bg-[#0A0E17] text-white">
+    <section id="about" className=" text-gray-900 relative py-20 px-6 md:px-16 lg:px-24  text-white">
       <div className="container mx-auto text-center pt-20 pb-10">
         {/* Heading */}
         <motion.h2
