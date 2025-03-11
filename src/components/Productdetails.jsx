@@ -27,7 +27,7 @@ const features = [
 
 const ProductDetails = () => {
   return (
-    <section className="bg-gradient-to-r from-black/70 to-blue-950 text-gray-900 py-16 px-6 pt-16">
+    <section className=" text-gray-900 py-16 px-6 pt-16" style={{position:"relative", zIndex:"10", background:"linear-gradient(to right ,#0606065c,#05051c6c)"}}>
       <div className="max-w-6xl mx-auto text-center mb-12 pt-16">
         <motion.h2 
           className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight"

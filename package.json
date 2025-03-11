@@ -12,6 +12,8 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@react-three/drei": "^9.78.2",
+    "@react-three/fiber": "^8.14.0",
     "@vercel/analytics": "^1.5.0",
     "bwip-js": "^4.5.1",
     "firebase": "^11.4.0",
@@ -31,6 +33,7 @@
     "react-typewriter-effect": "^1.1.0",
     "sitemap": "^8.0.0",
     "slick-carousel": "^1.8.1",
+    "three": "^0.156.0",
     "tsparticles": "^3.8.1"
   },
   "devDependencies": {

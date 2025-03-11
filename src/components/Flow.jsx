@@ -2,7 +2,7 @@ import React from 'react';
 
 const Flow = () => {
   return (
-    <section id="works" className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-blue-900/50 to-black text-gray-900 relative bg-gray-900 py-10 sm:py-16 lg:py-24">
+    <section id="works" className=" text-gray-900 relative  py-10 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 pt-10 pb-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl text-white font-extrabold mx-auto sm:text-4xl md:text-5xl lg:text-6xl">
