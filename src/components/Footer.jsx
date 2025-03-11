@@ -31,7 +31,7 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="flex flex-wrap justify-center md:justify-start space-x-6">
           <a href="/about" className="hover:text-purple-400 transition">About Us</a>
-          <a href="/services" className="hover:text-purple-400 transition">Services</a>
+          <a href="/product" className="hover:text-purple-400 transition">Services</a>
           <a href="/contact" className="hover:text-purple-400 transition">Contact</a>
           <a href="/blog" className="hover:text-purple-400 transition">Blog</a>
         </div>

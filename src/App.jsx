@@ -15,7 +15,7 @@ import Productdetail from './components/Productdetails';
 //import CosmosBackground from './components/CosmosBackground';
 // import ParticleBackground from './components/Particle';
 
-//import Article from './Pages/Article';
+import ArticlePage from './Pages/blog';
 
 const App = () => {
   return (
@@ -33,6 +33,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/product" element={<Product />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Article />} />
             <Route path="/product/:id" element={<Productdetail />} />
 
           </Routes>

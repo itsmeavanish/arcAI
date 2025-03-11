@@ -40,7 +40,7 @@ const ProductDetails = () => {
         </motion.h2>
       </div>
       
-      {/* Mobile View - Card Style */}
+      
       <div className="max-w-6xl mx-auto lg:hidden">
         {/* <p className="text-white text-center mb-4">Mobile View</p> */}
         <div className="flex flex-col items-center gap-8">
