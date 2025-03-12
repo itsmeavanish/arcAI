@@ -16,7 +16,7 @@ import Neo from './Neo/Neo';
 //import CosmosBackground from './components/CosmosBackground';
 // import ParticleBackground from './components/Particle';
 
-import ArticlePage from './Pages/blog';
+import Articles from './Data/articles';
 
 const App = () => {
   return (
@@ -38,7 +38,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/product" element={<Product />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<ArticlePage />} />
+            <Route path="/blog" element={<Articles />} />
             <Route path="/product/:id" element={<Productdetail />} />
             </Route>
           </Routes>

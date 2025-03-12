@@ -2,9 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import articles from "../Data/articles";
 
-const ArticlePage = () => {
-  const { id } = useParams();
-  const article = articles.find((article) => article.id.toString() === id);
+const ArticlePage = ({article}) => {
+  console.log(article)
+
 
   if (!article) {
     return (
@@ -18,7 +18,7 @@ const ArticlePage = () => {
     <div className="max-w-5xl mx-auto p-6 pt-12 md:p-12 lg:p-16 xl:p-20">
       {/* Hero Section */}
       <div
-        className="relative w-full h-80 bg-cover bg-center rounded-lg shadow-lg overflow-hidden"
+        className="mt-10 relative w-full h-80 bg-cover bg-center rounded-lg shadow-lg overflow-hidden"
         style={{ backgroundImage: `url(${article.image})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
@@ -42,7 +42,7 @@ const ArticlePage = () => {
         </div>
 
         {/* Article Content */}
-        <h2 className="text-4xl font-bold text-gray-800 mb-6">Article Content</h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-6">Content</h2>
         <p className="text-gray-700 leading-relaxed text-lg mb-6">{article.content}</p>
 
         {/* Related Images Section */}
