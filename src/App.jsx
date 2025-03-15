@@ -30,7 +30,7 @@ const App = () => {
 
           <>
           <span style={{position:"absolute", height:"100vh", width:"99vw"}}>
-              <Neo color="#5050C5" />
+              <Neo color="#5050c5" />
           </span>
           <Routes>
             <Route>

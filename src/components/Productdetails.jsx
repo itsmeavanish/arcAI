@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaBrain, FaChartLine, FaCheckCircle, FaDatabase, FaGlobe, FaLayerGroup, FaMicrochip } from "react-icons/fa";
 
 const features = [
   {
@@ -25,12 +25,55 @@ const features = [
   },
 ];
 
+const product=[
+  {
+    icon: <FaMicrochip />,
+    title: "Autonomous Finance Agents",
+    description: "AI-driven financial decision-making to optimize investments, budgeting, and risk management.",
+    gradient: "from-cyan-400 to-blue-500",
+    imgSrc: 'https://media.istockphoto.com/id/1168748420/vector/vector-of-a-businessman-and-a-robot-shaking-hands-standing-on-computer.jpg?s=612x612&w=0&k=20&c=exxMDECTTjZ-quaC8-VnyemS5KrYFafMebtI2ZJQo-c=',
+  },
+  {
+    icon: <FaDatabase />,
+    title: "Data Intelligence Suite",
+    description: "Advanced analytics and insights platform powered by cutting-edge machine learning algorithms.",
+    gradient: "from-purple-400 to-pink-500",
+    imgSrc: 'https://media.istockphoto.com/id/1951850135/vector/ai-powered-virtual-tutors-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=hTTgnD_n3llU2FGmvonjUERLBknH8Zw_G403zppndRQ=',
+  },
+  {
+    icon: <FaBrain />,
+    title: "Neural Network Solutions",
+    description: "Custom neural networks designed for complex problem-solving and pattern recognition.",
+    imgSrc: 'https://media.istockphoto.com/id/1222045163/vector/chatbot-ai-and-customer-service-concept-young-man-talking-with-chatbot-in-a-big-smartphone.jpg?s=612x612&w=0&k=20&c=yCMVqp_tYc2G5q-11AY7AmChgw_C-Zb4NhINr26BixU=',
+    gradient: "from-orange-400 to-red-500"
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Predictive Analytics Engine",
+    description: "Future-focused analytics tool for accurate forecasting and trend prediction.",
+    gradient: "from-green-400 to-teal-500"
+  },
+  {
+    icon: <FaGlobe />,
+    title: "Global AI Infrastructure",
+    description: "Scalable AI infrastructure solutions for enterprise-level deployment and management.",
+    gradient: "from-indigo-400 to-purple-500"
+  },
+  {
+    icon: <FaLayerGroup />,
+    title: "Deep Learning Platform",
+    description: "Comprehensive platform for training and deploying sophisticated deep learning models.",
+    gradient: "from-pink-400 to-rose-500",
+    imgSrc: 'https://media.istockphoto.com/id/1248235311/vector/web-hosting-concept-with-people-characters-online-database-server-web-data-center-cloud.jpg?s=612x612&w=0&k=20&c=yAC4Kkap1nYkercoAeNG5ZnfP2FVkBi1ScZw-kyBqMY=',
+  }
+];
+
 const ProductDetails = () => {
   return (
-    <section className=" text-gray-900 py-16 px-6 pt-16" style={{position:"relative", zIndex:"10", background:"linear-gradient(to right ,#0606065c,#05051c6c)"}}>
+    <section className=" text-gray-100 py-16 px-6 pt-16" style={{position:"relative", zIndex:"10", background:"linear-gradient(to right ,#0606065c,#05051c6c)"}}>
       <div className="max-w-6xl mx-auto text-center mb-12 pt-16">
         <motion.h2 
-          className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight"
+          className="text-5xl font-extrabold text-gray-700 tracking-wide leading-tight"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -44,10 +87,10 @@ const ProductDetails = () => {
       <div className="max-w-6xl mx-auto lg:hidden">
         {/* <p className="text-white text-center mb-4">Mobile View</p> */}
         <div className="flex flex-col items-center gap-8">
-          {features.map((feature, index) => (
+          {product.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xs sm:max-w-sm"
+              className={` rounded-lg shadow-lg overflow-hidden w-full max-w-xs sm:max-w-sm bg-gradient-to-r ${feature.gradient}`}
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -65,7 +108,7 @@ const ProductDetails = () => {
               {/* Text content */}
               <div className="p-5">
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
+                <p className="text-gray-400 text-sm">{feature.description}</p>
               </div>
             </motion.div>
           ))}
@@ -76,7 +119,7 @@ const ProductDetails = () => {
       <div className="max-w-6xl mx-auto hidden lg:block">
         {/* <p className="text-white text-center mb-4">Desktop View</p> */}
         <div className="space-y-12">
-          {features.map((feature, index) => (
+          {product.map((feature, index) => (
             <motion.div
               key={index}
               className={`flex flex-row items-center gap-8 ${
@@ -103,18 +146,20 @@ const ProductDetails = () => {
 
               {/* Text Section */}
               <motion.div
-                className="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 w-full lg:w-1/2"
+                className={`p-6 rounded-lg shadow-md flex items-start space-x-4 w-full lg:w-1/2 glass-effect card-hover  relative overflow-hidden`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
               >
+                
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
                 >
+                  <div className={`absolute top-0 left-0 h-1 w-full bg-gradient-to-r ${feature.gradient}`} />
                   <FaCheckCircle className="text-cyan-500 text-2xl mt-1" />
                 </motion.div>
                 <div>
@@ -128,7 +173,7 @@ const ProductDetails = () => {
                     {feature.title}
                   </motion.h3>
                   <motion.p 
-                    className="text-gray-600"
+                    className="text-gray-500"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.4 }}
