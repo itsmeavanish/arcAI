@@ -136,8 +136,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 mb-4 mt-10">Get In Touch</h1>
-            
+            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 mb-4 mt-10">Get In Touch</h2>
         <div className='text-white text-center mt-4'>To get started
           <a className='text-white text-center'
             href="https://docs.google.com/forms/d/e/1FAIpQLSdNb-uLNN4wEYkNAs26lnkmdDGWvdSXjyx-hlHglzopLgCFHw/viewform"> (Fill this google form) (click me)</a>
@@ -145,7 +144,7 @@ const Contact = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Have a question or want to learn more about our AI solutions? Reach out and we'll respond as soon as possible.</p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-5 gap-10">
+          <div className="grid lg:grid-cols-5 gap-10 ">
             {/* Contact Info */}
             <motion.div
               ref={refInfo}
@@ -154,8 +153,8 @@ const Contact = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="lg:col-span-2 space-y-8"
             >
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
-                <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Information</h2>
+              <div className="bg-white p-8 rounded-2xl shadow-xl glass-effect">
+                <h2 className="text-2xl font-bold mb-6 text-gray-200">Contact Information</h2>
 
                 <div className="space-y-6">
                   {contactInfo.map((item, index) => (
@@ -164,8 +163,9 @@ const Contact = () => {
                       whileHover={{ scale: 1.03 }}
                       className={`bg-gradient-to-r ${item.color} p-6 rounded-xl shadow-lg text-white`}
                     >
-                      <div className="flex items-center mb-2">
-                        <div className="bg-white/20 p-3 rounded-lg mr-4">
+                      
+                      <div className="flex items-center mb-2 ">
+                       <div className="bg-white/20 p-3 rounded-lg mr-4 ">
                           {item.icon}
                         </div>
                         <h3 className="text-xl font-medium">{item.title}</h3>
@@ -203,8 +203,8 @@ const Contact = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="lg:col-span-3"
             >
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
-                <h2 className="text-2xl font-bold mb-6 text-gray-800">Send a Message</h2>
+              <div className="bg-white p-8 rounded-2xl shadow-xl glass-effect">
+                <h2 className="text-2xl font-bold mb-6 text-gray-300">Send a Message</h2>
 
                 <AnimatePresence>
                   {submitted ? (
@@ -236,7 +236,7 @@ const Contact = () => {
                             placeholder="Your Name *"
                             value={name}
                             onChange={handleInputChange}
-                            className="w-full p-4 pl-12 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                            className="w-full p-4 pl-12 rounded-xl] border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 transition-all  bg-white/5 border border-white/10 text-white focus:outline-none focus:border-cyan-400"
                           />
                         </div>
                         <div className="relative">
@@ -247,7 +247,7 @@ const Contact = () => {
                             placeholder="Your Email *"
                             value={email}
                             onChange={handleInputChange}
-                            className="w-full p-4 pl-12 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                            className="w-full p-4 pl-12 rounded-2xl  border-gray-300 focus:ring-2 focus:ring-blue-500 transition-all  bg-white/5 border border-white/10 text-white focus:outline-none focus:border-cyan-400"
                           />
                         </div>
                       </div>
@@ -258,7 +258,7 @@ const Contact = () => {
                           placeholder="Subject"
                           value={subject}
                           onChange={handleInputChange}
-                          className="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                          className="w-full p-4 rounded-2xl border-gray-300 focus:ring-2 focus:ring-blue-500 transition-all  bg-white/5 border border-white/10 text-white focus:outline-none focus:border-cyan-400"
                         />
                       </div>
                       <div className="relative">
@@ -269,7 +269,7 @@ const Contact = () => {
                           placeholder="Your Message *"
                           value={message}
                           onChange={handleInputChange}
-                          className="w-full p-4 pl-12 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                          className="w-full p-4 pl-12 rounded-2xl  border-gray-300  focus:ring-2 focus:ring-blue-500 transition-all  bg-white/5 border border-white/10 text-white focus:outline-none focus:border-cyan-400"
                         />
                       </div>
                       <motion.button
@@ -277,7 +277,7 @@ const Contact = () => {
                         disabled={loading}
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
-                        className={`w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 rounded-xl text-lg font-semibold shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                        className={`w-full  py-4 rounded-xl text-lg  shadow-lg  bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium hover:opacity-90 transition-all ${loading && 'opacity-70 cursor-not-allowed'}`}
                       >
                         {loading ? (
                           <div className="flex items-center justify-center">
@@ -310,16 +310,16 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-16"
           >
-            <div className="bg-indigo-50 p-6 rounded-2xl shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Office Hours</h2>
+            <div className="bg-indigo-50 p-6 rounded-2xl shadow-md glass-effect">
+              <h2 className="text-2xl font-bold text-gray-200 mb-4">Office Hours</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700">Weekdays</h3>
-                  <p className="text-gray-600">9:00 AM - 6:00 PM (IST)</p>
+                  <h3 className="text-lg font-semibold text-gray-300">Weekdays</h3>
+                  <p className="text-gray-400">9:00 AM - 6:00 PM (IST)</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700">Weekends</h3>
-                  <p className="text-gray-600">By appointment only</p>
+                  <h3 className="text-lg font-semibold text-gray-300">Weekends</h3>
+                  <p className="text-gray-400">By appointment only</p>
                 </div>
               </div>
             </div>

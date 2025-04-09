@@ -1,6 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#root{
-    background-color: white;
-}
+:root {
+    --primary: #6d28d9;
+    --secondary: #22d3ee;
+    --background: #030712;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+.glass-effect {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  

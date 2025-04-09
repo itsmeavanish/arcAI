@@ -1,5 +1,5 @@
 export const generateSpherePositions = () => {
-  const particlesCount = 20000; // Increased for better visual effect
+  const particlesCount = 11000; // Increased for better visual effect
   const positions = new Float32Array(particlesCount * 4);
   const radius =9;
 

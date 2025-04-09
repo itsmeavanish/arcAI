@@ -43,7 +43,7 @@ const Navbar = () => {
           <img src={img} alt="arcAI Logo" className="h-16 w-16" />
         </a>
         {/* <span className="pl-2 text-3xl bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-bold">arcAI</span> */}
-        <span className="pl-2 text-2xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-200 bg-clip-text text-transparent font-bold">
+        <span className="pl-2 text-2xl bg-clip-text text-transparent font-bold rounded-lg bg-gradient-to-r from-cyan-400 to-purple-500 flex items-center justify-center">
           <a href="/">
             arcAI.engineer</a>
         </span>
