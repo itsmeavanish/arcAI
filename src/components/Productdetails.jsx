@@ -2,76 +2,39 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaBrain, FaChartLine, FaCheckCircle, FaDatabase, FaGlobe, FaLayerGroup, FaMicrochip } from "react-icons/fa";
 
-const features = [
+const product = [
   {
     title: "Human-Like AI Voice Agents",
+    gradient: "from-cyan-400 to-blue-500",
     description: "Our AI agents speak naturally with human-like voices, making customer interactions feel friendly, fluid, and personal-just like talking to a real support rep.",
     imgSrc: 'https://img.freepik.com/free-vector/voice-chat-concept-illustration_114360-7629.jpg?t=st=1744201536~exp=1744205136~hmac=e7cc7fb67e78eaf472b0df3fcf66174b497e94968b1a16338c212f242fd2a566&w=1380',
   },
   {
     title: "Smart Understanding & Instant Answers",
+    gradient: "from-purple-400 to-pink-500",
     description: "Powered by cutting-edge language models, these agents understand customer queries, even complex or vague ones, and respond instantly with accurate, helpful answers.",
     imgSrc: 'https://media.istockphoto.com/id/1951850135/vector/ai-powered-virtual-tutors-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=hTTgnD_n3llU2FGmvonjUERLBknH8Zw_G403zppndRQ=',
   },
   {
     title: "Fully Customizable for Your Industry",
+    gradient: "from-orange-400 to-red-500",
     description: "Whether you're in e-commerce, healthcare, finance, or beyond-our AI agents are tailored to match your workflows, vocabulary, and brand tone right out of the box.",
     imgSrc: 'https://img.freepik.com/free-vector/user-interface-development-isometric-concept-with-young-woman-creating-custom-design-mobile-application-vector-illustration_1284-72341.jpg?t=st=1744201640~exp=1744205240~hmac=f4b980cbb7acf1e40ab180f0a69d98458c6053af41fa0bd203d5dbfce5b78b0f&w=826',
   },
   {
     title: "End-to-End Task Handling",
+    gradient: "from-green-400 to-teal-500",
     description: "From checking order status to updating account details or booking appointments-our AI handles it all, integrated directly with your systems and tools.",
     imgSrc: 'https://media.istockphoto.com/id/1248235311/vector/web-hosting-concept-with-people-characters-online-database-server-web-data-center-cloud.jpg?s=612x612&w=0&k=20&c=yAC4Kkap1nYkercoAeNG5ZnfP2FVkBi1ScZw-kyBqMY=',
   },
   {
     title: "24/7 Support with Built-In Learning",
+     gradient: "from-indigo-400 to-purple-500",
     description: "Always available, never tired. These agents learn and improve over time using real customer interactions-reducing support costs while boosting satisfaction.",
     imgSrc: 'https://img.freepik.com/free-vector/call-center-abstract-concept_335657-3001.jpg?t=st=1744201730~exp=1744205330~hmac=dbf0eec986fd2d6530f4e70051216579f88f82e70923fe01e6d8542b5d1e6674&w=826',
   },
 ];
 
-const product=[
-  {
-    icon: <FaMicrochip />,
-    title: "Autonomous Finance Agents",
-    description: "AI-driven financial decision-making to optimize investments, budgeting, and risk management.",
-    gradient: "from-cyan-400 to-blue-500",
-    imgSrc: 'https://media.istockphoto.com/id/1168748420/vector/vector-of-a-businessman-and-a-robot-shaking-hands-standing-on-computer.jpg?s=612x612&w=0&k=20&c=exxMDECTTjZ-quaC8-VnyemS5KrYFafMebtI2ZJQo-c=',
-  },
-  {
-    icon: <FaDatabase />,
-    title: "Data Intelligence Suite",
-    description: "Advanced analytics and insights platform powered by cutting-edge machine learning algorithms.",
-    gradient: "from-purple-400 to-pink-500",
-    imgSrc: 'https://media.istockphoto.com/id/1951850135/vector/ai-powered-virtual-tutors-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=hTTgnD_n3llU2FGmvonjUERLBknH8Zw_G403zppndRQ=',
-  },
-  {
-    icon: <FaBrain />,
-    title: "Neural Network Solutions",
-    description: "Custom neural networks designed for complex problem-solving and pattern recognition.",
-    imgSrc: 'https://media.istockphoto.com/id/1222045163/vector/chatbot-ai-and-customer-service-concept-young-man-talking-with-chatbot-in-a-big-smartphone.jpg?s=612x612&w=0&k=20&c=yCMVqp_tYc2G5q-11AY7AmChgw_C-Zb4NhINr26BixU=',
-    gradient: "from-orange-400 to-red-500"
-  },
-  {
-    icon: <FaChartLine />,
-    title: "Predictive Analytics Engine",
-    description: "Future-focused analytics tool for accurate forecasting and trend prediction.",
-    gradient: "from-green-400 to-teal-500"
-  },
-  {
-    icon: <FaGlobe />,
-    title: "Global AI Infrastructure",
-    description: "Scalable AI infrastructure solutions for enterprise-level deployment and management.",
-    gradient: "from-indigo-400 to-purple-500"
-  },
-  {
-    icon: <FaLayerGroup />,
-    title: "Deep Learning Platform",
-    description: "Comprehensive platform for training and deploying sophisticated deep learning models.",
-    gradient: "from-pink-400 to-rose-500",
-    imgSrc: 'https://media.istockphoto.com/id/1248235311/vector/web-hosting-concept-with-people-characters-online-database-server-web-data-center-cloud.jpg?s=612x612&w=0&k=20&c=yAC4Kkap1nYkercoAeNG5ZnfP2FVkBi1ScZw-kyBqMY=',
-  }
-];
 
 const ProductDetails = () => {
   return (

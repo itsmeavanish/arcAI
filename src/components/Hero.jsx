@@ -92,7 +92,7 @@ const Hero = () => {
                   </svg>
                 </div>
                 <span className="text-base sm:text-base md:text-2xl">
-                Tailored AI Agenst for Your Business
+                Tailored AI Agents for Your Business
                 </span>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="flex items-center">
