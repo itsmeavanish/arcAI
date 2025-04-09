@@ -25,12 +25,12 @@ const Hero = () => {
               arcAI
             </span>
             <div className="text-3xl sm:text-3xl md:text-5xl text-white mt-0.5 sm:mt-2">
-              Affordable AI Solutions
+              Building AI Agents
             </div>
           </h1>
 
           <p className="text-lg md:text-2xl sm:text-xl mb-4 md:mb-6 text-gray-300 max-w-xl">
-            Harnessing Research for developing Sustainable, Scalable, &amp; Impactful Solutions.
+            Harnessing power of AI Agents to revolutionize customer care support.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
@@ -75,7 +75,7 @@ const Hero = () => {
         >
           <div className=" backdrop-blur-lg rounded-xl p-4 sm:p-5 md:p-6 shadow-2xl border border-white/10 " style={{background:"linear-gradient(to right,#1a1a2e70,#23235b6e)", backdropFilter:"blur(10px)", opacity:"0.75", filter:"brightness(`1.9)"}}>
             <h2 className="text-xl sm:text-lg md:text-3xl lg:text-2xl font-semibold mb-3 sm:mb-4 lg:mb-6">
-              Why Choose Us?
+              Why choose us?
             </h2>
 
             <ul className="space-y-3 sm:space-y-3 md:space-y-4 lg:space-y-5 ">
@@ -92,7 +92,7 @@ const Hero = () => {
                   </svg>
                 </div>
                 <span className="text-base sm:text-base md:text-2xl">
-                  Data-Driven EarthTech Solutions
+                Tailored AI Agenst for Your Business
                 </span>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="flex items-center">
@@ -108,7 +108,7 @@ const Hero = () => {
                   </svg>
                 </div>
                 <span className="text-base sm:text-base md:text-2xl">
-                  Human-Centric AI &amp; Analytics
+                24/7 Scalable Support
                 </span>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="flex items-center">
@@ -124,7 +124,7 @@ const Hero = () => {
                   </svg>
                 </div>
                 <span className="text-base sm:text-base md:text-2xl">
-                  Next Generation Technology for a Sustainable Future
+                Fast Setup, Seamless Integration
                 </span>
               </motion.li>
             </ul>

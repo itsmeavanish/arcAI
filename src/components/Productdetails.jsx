@@ -4,24 +4,29 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const features = [
   {
-    title: "Autonomous Finance Agents",
-    description: "AI-driven financial decision-making to optimize investments, budgeting, and risk management.",
-    imgSrc: 'https://media.istockphoto.com/id/1168748420/vector/vector-of-a-businessman-and-a-robot-shaking-hands-standing-on-computer.jpg?s=612x612&w=0&k=20&c=exxMDECTTjZ-quaC8-VnyemS5KrYFafMebtI2ZJQo-c=',
+    title: "Human-Like AI Voice Agents",
+    description: "Our AI agents speak naturally with human-like voices, making customer interactions feel friendly, fluid, and personal-just like talking to a real support rep.",
+    imgSrc: 'https://img.freepik.com/free-vector/voice-chat-concept-illustration_114360-7629.jpg?t=st=1744201536~exp=1744205136~hmac=e7cc7fb67e78eaf472b0df3fcf66174b497e94968b1a16338c212f242fd2a566&w=1380',
   },
   {
-    title: "AI-Powered Document & Web Interaction",
-    description: "Interact with PDFs and websites using advanced AI chat and voice capabilities.",
+    title: "Smart Understanding & Instant Answers",
+    description: "Powered by cutting-edge language models, these agents understand customer queries, even complex or vague ones, and respond instantly with accurate, helpful answers.",
     imgSrc: 'https://media.istockphoto.com/id/1951850135/vector/ai-powered-virtual-tutors-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=hTTgnD_n3llU2FGmvonjUERLBknH8Zw_G403zppndRQ=',
   },
   {
-    title: "AI Customer Support",
-    description: "Seamless chat, voice, and call-based customer support with human-like AI voices.",
-    imgSrc: 'https://media.istockphoto.com/id/1222045163/vector/chatbot-ai-and-customer-service-concept-young-man-talking-with-chatbot-in-a-big-smartphone.jpg?s=612x612&w=0&k=20&c=yCMVqp_tYc2G5q-11AY7AmChgw_C-Zb4NhINr26BixU=',
+    title: "Fully Customizable for Your Industry",
+    description: "Whether you're in e-commerce, healthcare, finance, or beyond-our AI agents are tailored to match your workflows, vocabulary, and brand tone right out of the box.",
+    imgSrc: 'https://img.freepik.com/free-vector/user-interface-development-isometric-concept-with-young-woman-creating-custom-design-mobile-application-vector-illustration_1284-72341.jpg?t=st=1744201640~exp=1744205240~hmac=f4b980cbb7acf1e40ab180f0a69d98458c6053af41fa0bd203d5dbfce5b78b0f&w=826',
   },
   {
-    title: "Natural Language Database Interaction",
-    description: "Query and manage databases effortlessly using simple natural language commands.",
+    title: "End-to-End Task Handling",
+    description: "From checking order status to updating account details or booking appointments-our AI handles it all, integrated directly with your systems and tools.",
     imgSrc: 'https://media.istockphoto.com/id/1248235311/vector/web-hosting-concept-with-people-characters-online-database-server-web-data-center-cloud.jpg?s=612x612&w=0&k=20&c=yAC4Kkap1nYkercoAeNG5ZnfP2FVkBi1ScZw-kyBqMY=',
+  },
+  {
+    title: "24/7 Support with Built-In Learning",
+    description: "Always available, never tired. These agents learn and improve over time using real customer interactions-reducing support costs while boosting satisfaction.",
+    imgSrc: 'https://img.freepik.com/free-vector/call-center-abstract-concept_335657-3001.jpg?t=st=1744201730~exp=1744205330~hmac=dbf0eec986fd2d6530f4e70051216579f88f82e70923fe01e6d8542b5d1e6674&w=826',
   },
 ];
 
@@ -35,7 +40,7 @@ const ProductDetails = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-teal-200">Discover the Power of AI with</span> <br />
+          <span className="text-teal-200">Power of Customer Support with</span> <br />
           <span className="text-purple-600 text-7xl">arcAI!</span>
         </motion.h2>
       </div>

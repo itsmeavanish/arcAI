@@ -60,7 +60,7 @@ const Flow = () => {
           </div>
         </div>
       </div>
-      <div className='text-white text-center mt-4'>To get started,
+      <div className='text-white text-center mt-4'>To get started &nbsp;
         <a className='text-white text-center'
           href="https://docs.google.com/forms/d/e/1FAIpQLSdNb-uLNN4wEYkNAs26lnkmdDGWvdSXjyx-hlHglzopLgCFHw/viewform">(Fill this Form)</a>
       </div>
