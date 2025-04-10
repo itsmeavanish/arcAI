@@ -6,6 +6,7 @@ import About from "../components/About.jsx"
 import Productdeatils from '../components/Productdetails.jsx'
 import Review from "../components/Review.jsx"
 import Flow from "../components/Flow.jsx"
+import AIAGENTCC from '../components/Aiagentcc.jsx'
 import Neo from '../Neo/Neo.jsx'
 
 
@@ -17,6 +18,7 @@ const Home = () => {
     <div>
       <Hero />
       <Productdeatils/>
+      <AIAGENTCC />
       <Flow />
       <About />
       {/* <Review/> */}

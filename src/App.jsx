@@ -10,6 +10,7 @@ import Product from './Pages/Product';
 import Contact from './Pages/Contact';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AIAGENTCC from "./components/Aiagentcc";
 //import Whatsapp from './components/Whatsapp';
 import Productdetail from './components/Productdetails';
 import Neo from './Neo/Neo';
@@ -22,8 +23,6 @@ const App = () => {
   return (
     
     <HelmetProvider>
-      {/* <ParticleBackground /> */}
-
       <div className='bg-gray-950'>
         <Router>
           <Navbar />
