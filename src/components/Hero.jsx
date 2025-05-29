@@ -61,7 +61,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-6 py-3 sm:px-5 sm:py-2 rounded-lg border border-white/10 bg-white/5 backdrop-blur-lg text-white/70 hover:bg-white/10 hover:text-white transition-all text-lg sm:text-base"
             >
-              <a href="/about" className="block w-full h-full md:text-2xl">Documentation</a>
+              <a href="/quiz" className="block w-full h-full md:text-2xl">Be a Part of Us</a>
             </motion.button>
           </div>
         </motion.div>

@@ -19,7 +19,7 @@ export default function Neo({color}) {
     camera={{ position: [0, 0, 5], fov: 75 }} >
       <ambientLight intensity={0.5} />
       <ParticleSphere color={color} />
-      <OrbitControls enableZoom={false} />
+      <OrbitControls/>
     </Canvas>
   );
 };

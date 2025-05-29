@@ -28,7 +28,7 @@ const ParticleSphere = ({ color }) => {
       );
       
       // Calculate noise value for this position
-      const noise =2;
+      const noise =1.1;
       
       // Apply noise-based displacement
       const displacement = 0.8 + noise * morphStrength;

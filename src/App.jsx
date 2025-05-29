@@ -18,7 +18,7 @@ import Neo from './Neo/Neo';
 // import ParticleBackground from './components/Particle';
 
 import Articles from './Data/articles';
-
+import QuizApp from './quiz/page';
 const App = () => {
   return (
     
@@ -39,6 +39,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Articles />} />
             <Route path="/product/:id" element={<Productdetail />} />
+            <Route path='/quiz' element={<QuizApp />} />
             </Route>
           </Routes>
           </>
